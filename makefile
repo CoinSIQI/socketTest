@@ -1,10 +1,11 @@
-file := epoll_server.cpp inet.h
+filename:=thread_server
+file := $(filename).cpp inet.h
 
-epoll_server:epoll_server.o 
-	gcc epoll_server.o -o epoll_server $(CXXFLAGE)
+$(filename):$(filename).o 
+	gcc $(filename).o -o $(filename) -pthread $(CXXFLAGE)
 
-epoll_server.o:$(file)
-	gcc -c epoll_server.cpp -I ./ $(CXXFLAGE)
+$(filename).o:$(file)
+	gcc -c $(filename).cpp -I ./ -pthread $(CXXFLAGE)
 
 .PHONY:clear
 clear:
