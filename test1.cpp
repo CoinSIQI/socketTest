@@ -35,9 +35,11 @@ int main()
     //fcntl(STDIN_FILENO,F_SETFL,flag);
     while(1)
     {
-        read(STDIN_FILENO,buf,1024);
+        //read(STDIN_FILENO,buf,1024);
         //fgets();
-        strcpy(p,buf);
+        //strcpy(p,buf);
+        printf("%s\n",p);
+        sleep(1);
     }
     munmap(p,4096);
     printf("hello world!\n");

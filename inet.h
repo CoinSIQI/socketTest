@@ -1,5 +1,5 @@
 #ifndef __myhead_h
-#define __muhead_h
+#define __myhead_h
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <stdlib.h>
